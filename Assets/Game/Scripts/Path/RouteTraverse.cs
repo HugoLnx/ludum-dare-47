@@ -12,7 +12,7 @@ namespace LD47 {
         private RoutePoint[] Points => route.Points;
         private RoutePoint Current;
         private RoutePoint Next;
-        public Vector2 Position => Current.PathAbsLerpTo(Next, traversed).position;
+        public Vector2 LocalPosition => Current.PathAbsLerpTo(Next, traversed).position;
 
         public RouteTraverse(Route route) {
             this.route = route;
