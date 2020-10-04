@@ -6,12 +6,12 @@ public class Rotate : MonoBehaviour
 {
 
     [SerializeField] private float speed;
-    public GameObject sprite;
+    private SpriteRenderer sprite;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
