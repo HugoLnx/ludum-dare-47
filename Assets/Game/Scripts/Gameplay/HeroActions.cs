@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace LD47 {
     public class HeroActions : MonoBehaviour
@@ -13,7 +14,7 @@ namespace LD47 {
         private void OnCollision(Collider2D other)
         {
             if (other.CompareTag(TAG_TRAP)) {
-                Debug.Log("DIIIIIIE!");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
     }

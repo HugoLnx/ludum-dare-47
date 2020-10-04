@@ -292,7 +292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   head: {fileID: 6097389551417984706}
   height: 5
-  delay: 3
+  delay: 1
   fallDuration: 0.5
   liftDuration: 1
   fallEase: 13
