@@ -15,7 +15,8 @@ namespace LD47 {
 
         private void Start() {
             this.box.size = this.route.Bounds.size;
-            this.box.offset = this.route.Bounds.center;
+            //this.box.offset = this.route.Bounds.center;
+            this.box.transform.localPosition = this.route.Bounds.center;
         }
     }
 }

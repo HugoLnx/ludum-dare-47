@@ -24,18 +24,20 @@ public class Hero : MonoBehaviour
 
     private void FixedUpdate()
     {
+        var newPosition = body.position;
         if (this.pressedRight) {
-            body.MovePosition(body.position + (Vector2.right * speed * Time.fixedDeltaTime));
+            newPosition += Vector2.right * speed * Time.fixedDeltaTime;
         }
         if (this.pressedLeft) {
-            body.MovePosition(body.position + (Vector2.left * speed * Time.fixedDeltaTime));
+            newPosition += Vector2.left * speed * Time.fixedDeltaTime;
         }
         if (this.pressedUp) {
-            body.MovePosition(body.position + (Vector2.up * speed * Time.fixedDeltaTime));
+            newPosition += Vector2.up * speed * Time.fixedDeltaTime;
         }
         if (this.pressedDown) {
-            body.MovePosition(body.position + (Vector2.down * speed * Time.fixedDeltaTime));
+            newPosition += Vector2.down * speed * Time.fixedDeltaTime;
         }
+        body.MovePosition(newPosition);
         this.pressedRight = false;
         this.pressedLeft = false;
         this.pressedUp = false;
