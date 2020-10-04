@@ -218,7 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f0bb0235885e23489ff6d337b6b022f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spdParallax: 0.1
+  spdParallax: 0.3
 --- !u!1 &419012011
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,7 +625,7 @@ MonoBehaviour:
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
-    m_Time: 2
+    m_Time: 1
     m_CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -981,7 +981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f0bb0235885e23489ff6d337b6b022f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spdParallax: 1
+  spdParallax: 0.9
 --- !u!212 &975291069
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6186,7 +6186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f0bb0235885e23489ff6d337b6b022f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spdParallax: 0.03
+  spdParallax: 0.1
 --- !u!1 &1214660852
 GameObject:
   m_ObjectHideFlags: 0
@@ -6748,7 +6748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f0bb0235885e23489ff6d337b6b022f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spdParallax: 0.7
+  spdParallax: 0.8
 --- !u!1 &2043268994
 GameObject:
   m_ObjectHideFlags: 0
@@ -7009,4 +7009,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f0bb0235885e23489ff6d337b6b022f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spdParallax: 0.6
+  spdParallax: 0.7

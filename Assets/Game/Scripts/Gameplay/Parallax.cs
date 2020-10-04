@@ -6,18 +6,20 @@ using UnityEngine;
 public class Parallax : MonoBehaviour
 {
     private Transform cam;
-    private float length, startPos;
+    private float length;
     [SerializeField] private float spdParallax;
     private SpriteRenderer srenderer;
+    private float offset;
 
     private void Awake() {
         this.srenderer = GetComponent<SpriteRenderer>();
+        this.offset = 0f;
     }
     private void Start()
     {
-        startPos = transform.position.x;
-        length = GetComponent<SpriteRenderer>().bounds.size.x;
         cam = Camera.main.transform;
+        this.transform.position = new Vector3(cam.position.x, this.transform.position.y, this.transform.position.z);
+        length = GetComponent<SpriteRenderer>().bounds.size.x;
         CreateCopy(-length);
         CreateCopy(length);
     }
@@ -37,18 +39,16 @@ public class Parallax : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float rePos = (cam.transform.position.x * (1 - spdParallax));
-        float dist = (cam.transform.position.x * spdParallax);
+        transform.position = Vector3.right * ((cam.transform.position.x * (1f-spdParallax)) + this.offset);
+        var toCamera = cam.position.x - transform.position.x;
 
-        transform.position = new Vector3(startPos + dist, transform.position.y, transform.position.z);
-
-        if(rePos > startPos + length/2)
+        if (toCamera < -length)
         {
-            startPos += length;
+            this.offset -= length;
         }
-        else if (rePos < startPos - length/2)
+        else if (toCamera > length)
         {
-            startPos -= length;
+            this.offset += length;
         }
     }
 }
