@@ -51,3 +51,6 @@ TagManager:
   - name: Trap
     uniqueID: 4082636841
     locked: 0
+  - name: VFX
+    uniqueID: 3029746827
+    locked: 0
