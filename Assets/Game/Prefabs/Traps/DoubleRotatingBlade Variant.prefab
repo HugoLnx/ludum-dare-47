@@ -7,13 +7,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1570194845097675863, guid: 7fc25c7f6a12e5747b97a98fffd7a4a8, type: 3}
+      propertyPath: speed
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3483430949986261408, guid: 7fc25c7f6a12e5747b97a98fffd7a4a8, type: 3}
       propertyPath: m_Name
-      value: DoubleRotatingBlade Variant
+      value: DoubleRotatingBlade
       objectReference: {fileID: 0}
     - target: {fileID: 3483430949986261411, guid: 7fc25c7f6a12e5747b97a98fffd7a4a8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.09
+      value: -5.63
       objectReference: {fileID: 0}
     - target: {fileID: 3483430949986261411, guid: 7fc25c7f6a12e5747b97a98fffd7a4a8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -25,15 +29,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3483430949986261411, guid: 7fc25c7f6a12e5747b97a98fffd7a4a8, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3483430949986261411, guid: 7fc25c7f6a12e5747b97a98fffd7a4a8, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3483430949986261411, guid: 7fc25c7f6a12e5747b97a98fffd7a4a8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3483430949986261411, guid: 7fc25c7f6a12e5747b97a98fffd7a4a8, type: 3}
       propertyPath: m_LocalRotation.w
