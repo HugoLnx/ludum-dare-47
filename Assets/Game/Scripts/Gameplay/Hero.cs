@@ -4,28 +4,41 @@ using UnityEngine;
 
 public class Hero : MonoBehaviour
 {
-    [SerializeField] private float speed;    
+    [SerializeField] private float speed;
+    private Rigidbody2D body;
+    private bool pressedRight;
+    private bool pressedLeft;
+    private bool pressedUp;
+    private bool pressedDown;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    private void Awake() {
+        this.body = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update() {
+        this.pressedRight = Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D);
+        this.pressedLeft = Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A);
+        this.pressedUp = Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W);
+        this.pressedDown = Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S);
+    }
+
+    private void FixedUpdate()
     {
-        if(Input.GetKey(KeyCode.RightArrow)){
-            transform.Translate (Vector2.right * speed * Time.deltaTime);
+        if (this.pressedRight) {
+            body.MovePosition(body.position + (Vector2.right * speed * Time.fixedDeltaTime));
         }
-        if(Input.GetKey(KeyCode.LeftArrow)){
-            transform.Translate (Vector2.right * -speed * Time.deltaTime);
+        if (this.pressedLeft) {
+            body.MovePosition(body.position + (Vector2.left * speed * Time.fixedDeltaTime));
         }
-        if(Input.GetKey(KeyCode.DownArrow)){
-             transform.Translate (Vector2.up * -speed * Time.deltaTime);
+        if (this.pressedUp) {
+            body.MovePosition(body.position + (Vector2.up * speed * Time.fixedDeltaTime));
         }
-        if(Input.GetKey(KeyCode.UpArrow)){
-            transform.Translate (Vector2.up * speed * Time.deltaTime);
+        if (this.pressedDown) {
+            body.MovePosition(body.position + (Vector2.down * speed * Time.fixedDeltaTime));
         }
+        this.pressedRight = false;
+        this.pressedLeft = false;
+        this.pressedUp = false;
+        this.pressedDown = false;
     }
 }

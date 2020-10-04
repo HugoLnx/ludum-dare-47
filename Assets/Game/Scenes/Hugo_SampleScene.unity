@@ -1993,8 +1993,8 @@ GameObject:
   - component: {fileID: 1361161251}
   - component: {fileID: 1361161252}
   - component: {fileID: 1361161253}
-  - component: {fileID: 1361161256}
   - component: {fileID: 1361161254}
+  - component: {fileID: 1361161255}
   m_Layer: 0
   m_Name: Route
   m_TagString: Untagged
@@ -2067,7 +2067,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1361161256
+--- !u!114 &1361161255
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2076,9 +2076,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1361161250}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb831d09c05f5744bb3979cfdd8349a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f0a5642fded6934f807cde971ef022e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 35
 --- !u!1001 &1409308852
 PrefabInstance:
   m_ObjectHideFlags: 0
