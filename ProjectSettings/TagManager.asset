@@ -45,3 +45,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Object
+    uniqueID: 2799660273
+    locked: 0
+  - name: Trap
+    uniqueID: 4082636841
+    locked: 0
