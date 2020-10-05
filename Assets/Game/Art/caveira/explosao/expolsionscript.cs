@@ -15,6 +15,8 @@ public class expolsionscript : MonoBehaviour
     private IEnumerator Start()
     {
         ExplodeAll();
+        yield return new WaitForSeconds(0.25f);
+        AudioPlayer.Sfx.Play("haha");
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

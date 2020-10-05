@@ -474,7 +474,7 @@ MonoBehaviour:
   - name: main
     source: {fileID: 0}
     clips:
-    - {fileID: 8300000, guid: 52a65e25081dfee4eab58e728d57940e, type: 3}
+    - {fileID: 8300000, guid: 5e00f08f7725e3048a4bc01e60cffcf3, type: 3}
     randomPick: 0
     introLoop: 0
 --- !u!1 &8135768411056630426
@@ -638,6 +638,12 @@ MonoBehaviour:
     source: {fileID: 0}
     clips:
     - {fileID: 8300000, guid: c506fb069d54e104cbecf1cc51e1eb07, type: 3}
+    randomPick: 0
+    introLoop: 0
+  - name: haha
+    source: {fileID: 5950040464207216432}
+    clips:
+    - {fileID: 8300000, guid: 8bf8eda0cb05788478c1c9a09ab4074c, type: 3}
     randomPick: 0
     introLoop: 0
 --- !u!1 &8135768411890726608

@@ -6,6 +6,7 @@ using DG.Tweening;
 
 public class Pendulum : MonoBehaviour
 {
+    //private static int PendulumInx;
     private readonly Vector2 NEUTRAL_DIRECTION = Vector2.down;
     private const float NEUTRAL_ANGLE = 0f;
     [SerializeField] private bool rotateHead;
