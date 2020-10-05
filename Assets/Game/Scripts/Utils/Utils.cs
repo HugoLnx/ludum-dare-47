@@ -161,6 +161,14 @@ public static class Utils
         );
     }
 
+    public static void SetLocalPosition(Transform transform, float? x = null, float? y = null, float? z = null) {
+        transform.localPosition = new Vector3(
+            x.HasValue ? x.Value : transform.localPosition.x,
+            y.HasValue ? y.Value : transform.localPosition.y,
+            z.HasValue ? z.Value : transform.localPosition.z
+        );
+    }
+
     public static void SetPosition(MonoBehaviour mono, float? x = null, float? y = null, float? z = null)
         => SetPosition(mono.transform, x, y, z);
 
