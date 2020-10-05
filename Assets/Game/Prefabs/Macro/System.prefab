@@ -822,7 +822,7 @@ MonoBehaviour:
     randomPick: 0
     introLoop: 0
   - name: pendulum-blade
-    source: {fileID: 5950040464207216432}
+    source: {fileID: 0}
     clips:
     - {fileID: 8300000, guid: e7fc5adb55846cf4caac51389e1a6904, type: 3}
     randomPick: 0
