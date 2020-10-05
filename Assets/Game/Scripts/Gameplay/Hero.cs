@@ -15,6 +15,10 @@ public class Hero : MonoBehaviour
         this.body = GetComponent<Rigidbody2D>();
     }
 
+    private void Start() {
+        AudioPlayer.ContinuousSfx.Play("fire-loop");
+    }
+
     private void Update() {
         this.pressedRight = Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D);
         this.pressedLeft = Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A);

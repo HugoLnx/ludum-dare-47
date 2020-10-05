@@ -5,7 +5,7 @@ using UnityEngine;
 public class DontDestroyOnLoadSingleton : MonoBehaviour
 {
     private static DontDestroyOnLoadSingleton instance;
-    void Awake() {
+    private void Awake() {
         SceneAwakeEvent.Instance.Emit();
         if (instance != null) {
             Destroy(this.gameObject);
@@ -13,5 +13,10 @@ public class DontDestroyOnLoadSingleton : MonoBehaviour
         }
         instance = this;
         DontDestroyOnLoad(this.gameObject);
+    }
+
+    private void Start() {
+        Debug.Log("PLAY");
+        AudioPlayer.Music.Play("main");
     }
 }

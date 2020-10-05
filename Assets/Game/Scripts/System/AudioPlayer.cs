@@ -32,7 +32,7 @@ public class AudioPlayer : MonoBehaviour
 
     public PlayerType type;
     public bool muted;
-    public bool IsMuted => muted || IsMusic;
+    public bool IsMuted => muted;
     public bool IsMusic => type == PlayerType.MUSIC;
     public bool IsSimpleSFX => type == PlayerType.SFX;
     public bool IsContinuousSFX => type == PlayerType.CONTINUOUS_SFX;
@@ -59,7 +59,7 @@ public class AudioPlayer : MonoBehaviour
 
     public bool IsAnySourcePlaying => allSources.Any(s => s != null && s.isPlaying);
 
-    public const float DEFAULT_VOLUME = 0.75f;
+    public const float DEFAULT_VOLUME = 0.5f;
     private float volume = DEFAULT_VOLUME;
     public float Volume {
         get => volume;
