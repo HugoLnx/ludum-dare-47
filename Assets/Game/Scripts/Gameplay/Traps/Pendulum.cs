@@ -6,7 +6,9 @@ using DG.Tweening;
 
 public class Pendulum : MonoBehaviour
 {
-    //private static int PendulumInx;
+    private const int MIN_SORT_ORDER = 500;
+    private static int count = 0;
+    private SpriteRenderer chainSprite;
     private readonly Vector2 NEUTRAL_DIRECTION = Vector2.down;
     private const float NEUTRAL_ANGLE = 0f;
     [SerializeField] private bool rotateHead;
@@ -20,6 +22,7 @@ public class Pendulum : MonoBehaviour
     private SpriteMask chainMask;
     private float currentAngle;
     private Sequence tween;
+    public static bool bladeSfx;
 
     private Vector2 SupportPosition => supportRef.position;
     private Vector2 HeadPosition {
@@ -31,7 +34,17 @@ public class Pendulum : MonoBehaviour
 
     private void Awake()
     {
+        Pendulum.count = 0;
+        Pendulum.bladeSfx = false;
         Setup();
+        this.chainSprite = chainMask.GetComponentInParent<SpriteRenderer>();
+    }
+
+    private void Start() {
+        var sortNumber = MIN_SORT_ORDER + ((Pendulum.count++)*3);
+        chainSprite.sortingOrder = sortNumber;
+        chainMask.frontSortingOrder = sortNumber+1;
+        chainMask.backSortingOrder = sortNumber-1;
     }
 
     private void OnEnable() {
@@ -49,10 +62,24 @@ public class Pendulum : MonoBehaviour
     [ExposeMethodInEditor]
     private void RestartSwing()
     {
+        var swingDownToggle = true;
+        var swingUpToggle = false;
         this.tween?.Kill();
         this.tween = DOTween.Sequence()
-        .Append(CreateSwingTween(this.swingDownEase, from: EndAngle, to: NEUTRAL_ANGLE))
-        .Append(CreateSwingTween(this.swingUpEase, from: NEUTRAL_ANGLE, to: StartAngle))
+        .Append(
+            CreateSwingTween(this.swingDownEase, from: EndAngle, to: NEUTRAL_ANGLE)
+            .OnStepComplete(() => {
+                if (this.chainSprite.isVisible && swingDownToggle) Pendulum.bladeSfx = true;
+                swingDownToggle = !swingDownToggle;
+            })
+        )
+        .Append(
+            CreateSwingTween(this.swingUpEase, from: NEUTRAL_ANGLE, to: StartAngle)
+            .OnStepComplete(() => {
+                if (this.chainSprite.isVisible && swingUpToggle) Pendulum.bladeSfx = true;
+                swingUpToggle = !swingUpToggle;
+            })
+        )
         .SetLoops(-1, LoopType.Yoyo)
         .SetUpdate(UpdateType.Fixed)
         .Play();

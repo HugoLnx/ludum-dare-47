@@ -46,6 +46,7 @@ public class LongBlade : MonoBehaviour
 
     private IEnumerator AnimatedChop()
     {
+        AudioPlayer.Sfx.Play("metal-shake");
         var shakeTween = this.srenderer.transform.DOShakePosition(
             duration: this.shakeDuration,
             strength: this.shakeStrength,
@@ -56,7 +57,9 @@ public class LongBlade : MonoBehaviour
         var chopTween = this.body.DORotate(
             endValue: this.initialRotation + this.chopAngle,
             duration: this.chopDuration
-        ).SetEase(this.chopEase);
+        )
+        .SetEase(this.chopEase)
+        .OnPlay(() => AudioPlayer.Sfx.Play("long-blade-chop"));
 
         var liftTween = this.body.DORotate(
             endValue: this.initialRotation,

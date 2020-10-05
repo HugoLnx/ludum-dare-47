@@ -294,6 +294,156 @@ MonoBehaviour:
     - {fileID: 8300000, guid: f2d2b689235699d41a1d70d185cd2056, type: 3}
     randomPick: 0
     introLoop: 0
+--- !u!1 &7059597591181401140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4796450883572907595}
+  - component: {fileID: 6769191224651037627}
+  - component: {fileID: 1981829487355371702}
+  m_Layer: 0
+  m_Name: continuous-sfx-2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4796450883572907595
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7059597591181401140}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8135768410044109052}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &6769191224651037627
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7059597591181401140}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1981829487355371702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7059597591181401140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2544e299e399b24ab7a952a4f7376d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  muted: 0
+  allClips: []
+  allGroups:
+  - name: walk-spiky-chain
+    source: {fileID: 0}
+    clips:
+    - {fileID: 8300000, guid: ed3550d528413db4cb0dbee5ff401065, type: 3}
+    randomPick: 0
+    introLoop: 0
 --- !u!1 &8135768410044109055
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,6 +474,7 @@ Transform:
   - {fileID: 8135768411056630427}
   - {fileID: 8135768410104566803}
   - {fileID: 2154410604313523258}
+  - {fileID: 4796450883572907595}
   m_Father: {fileID: 8135768411890726622}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -644,6 +795,48 @@ MonoBehaviour:
     source: {fileID: 5950040464207216432}
     clips:
     - {fileID: 8300000, guid: 8bf8eda0cb05788478c1c9a09ab4074c, type: 3}
+    randomPick: 0
+    introLoop: 0
+  - name: blade
+    source: {fileID: 5950040464207216432}
+    clips:
+    - {fileID: 8300000, guid: bdcc43ef61779da4192603972ae82873, type: 3}
+    randomPick: 0
+    introLoop: 0
+  - name: blade2
+    source: {fileID: 5950040464207216432}
+    clips:
+    - {fileID: 8300000, guid: a0175671cf266984dbac81321740b1db, type: 3}
+    randomPick: 0
+    introLoop: 0
+  - name: machete-fall
+    source: {fileID: 0}
+    clips:
+    - {fileID: 8300000, guid: 6ef79e2a96eaeed45ada17c9e17903a4, type: 3}
+    randomPick: 0
+    introLoop: 0
+  - name: machete-lift
+    source: {fileID: 0}
+    clips:
+    - {fileID: 8300000, guid: 4407f99cf6ace0d4681e5274166a9957, type: 3}
+    randomPick: 0
+    introLoop: 0
+  - name: pendulum-blade
+    source: {fileID: 5950040464207216432}
+    clips:
+    - {fileID: 8300000, guid: e7fc5adb55846cf4caac51389e1a6904, type: 3}
+    randomPick: 0
+    introLoop: 0
+  - name: metal-shake
+    source: {fileID: 0}
+    clips:
+    - {fileID: 8300000, guid: 94dc9eb89ccbcaa47a735e75864a8b65, type: 3}
+    randomPick: 0
+    introLoop: 0
+  - name: long-blade-chop
+    source: {fileID: 0}
+    clips:
+    - {fileID: 8300000, guid: af7190c7db60b574f9fa27d68046bf7d, type: 3}
     randomPick: 0
     introLoop: 0
 --- !u!1 &8135768411890726608

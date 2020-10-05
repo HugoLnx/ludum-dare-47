@@ -50,28 +50,31 @@ public class Machete : MonoBehaviour
             strength: this.shakeStrength,
             vibrato: this.shakeVibrato,
             randomness: this.shakeRandomness
-        );
+        )
+        .SetUpdate(UpdateType.Fixed);
+        AudioPlayer.Sfx.Play("metal-shake");
+        yield return shakeTween.WaitForCompletion();
 
         var fallTween = this.head.DOMoveY(
             endValue: this.startY - this.height,
             duration: this.fallDuration
         )
-        .SetEase(this.fallEase);
+        .SetEase(this.fallEase)
+        .SetUpdate(UpdateType.Fixed);
+        yield return fallTween.WaitForPosition(0.1f);
+        AudioPlayer.Sfx.Play("machete-fall");
+        yield return fallTween.WaitForCompletion();
 
         var liftTween = this.head.DOMoveY(
             endValue: this.startY,
             duration: this.liftDuration
         )
-        .SetEase(this.liftEase);
+        .SetEase(this.liftEase)
+        .SetUpdate(UpdateType.Fixed);
+        yield return liftTween.WaitForPosition(0.1f);
+        AudioPlayer.Sfx.Play("machete-lift");
+        yield return liftTween.WaitForCompletion();
 
-        var tween = DOTween.Sequence()
-            .Append(shakeTween)
-            .Append(fallTween)
-            .Append(liftTween)
-            .SetUpdate(UpdateType.Fixed)
-            .Play();
-
-        yield return tween.WaitForCompletion();
         this.animating = false;
     }
 }

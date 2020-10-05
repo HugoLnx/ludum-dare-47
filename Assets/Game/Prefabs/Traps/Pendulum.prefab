@@ -322,7 +322,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5090061744869674034}
   - component: {fileID: 5090061744869674044}
-  - component: {fileID: 5090061744869674035}
+  - component: {fileID: 4715129479193010903}
   m_Layer: 0
   m_Name: Head
   m_TagString: Trap
@@ -366,8 +366,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &5090061744869674035
-BoxCollider2D:
+--- !u!58 &4715129479193010903
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -380,18 +380,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
-    newSize: {x: 5.12, y: 5.12}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.73, y: 0.73}
-  m_EdgeRadius: 0
+  m_Radius: 0.8971742
 --- !u!1 &5090061745122592966
 GameObject:
   m_ObjectHideFlags: 0
