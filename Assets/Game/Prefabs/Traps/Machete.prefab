@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   head: {fileID: 6097389551417984706}
-  height: 5
+  height: 10
   delay: 1
   fallDuration: 0.5
   liftDuration: 1
@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 6097389551417984707}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
